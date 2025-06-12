@@ -1,0 +1,72 @@
+header {
+  display: flex;
+  /* background-color: #2b265e; */
+  /* border-bottom: 5px solid #9c372f; */
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Extra large devices (large desktops) */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Large devices (desktops) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Small devices (landscape phones) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Extra small devices (portrait phones) */
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+
+.between {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.main-content {
+  padding-top: 48px;
+}
+
+* {
+  /* font-family: "Bebas Neue", sans-serif; */
+  /* font-family: "Inter", sans-serif; */
+}

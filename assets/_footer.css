@@ -1,0 +1,21 @@
+footer {
+  background-color: #9c372f;
+  color: #fff;
+  margin-top: 16px;
+
+  font-size: 12px;
+  padding: 24px 0;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container__social p {
+  line-height: 1.2;
+}
+
+.footer-container__social-icons svg {
+  color: #fff;
+  width: 26px;
+  margin-right: 12px;
+}
+
+

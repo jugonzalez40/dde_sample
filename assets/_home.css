@@ -1,0 +1,101 @@
+.home-container {
+  position: relative;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif !important;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.page-title > a {
+  text-decoration: none;
+  outline: none;
+  color: #2b265e;
+}
+
+.home-container__title > a:visited {
+  color: #2b265e;
+}
+
+.vinyl-preview-container {
+  position: relative;
+  align-items: center;
+  gap: 8px;
+}
+
+.vinyl-preview-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.vinyl-preview-container ul::-webkit-scrollbar {
+  display: none;
+}
+
+.vinyl-preview-container ul li {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.vinyl-preview-container ul li:last-child {
+  margin-right: 0;
+}
+
+/* Carousel buttons */
+.carousel-btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+.carousel-btn:hover {
+  transform: scale(1.1);
+}
+
+.carousel-btn:active {
+  transform: scale(0.95);
+}
+
+.carousel-btn svg {
+  color: #2b265e;
+}
+
+.carousel-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.carousel-btn:disabled:hover {
+  transform: none;
+}
+
+/* Hide carousel buttons on mobile */
+@media screen and (max-width: 992px) {
+  .carousel-btn {
+    display: none !important;
+  }
+
+  .vinyl-preview-container {
+    gap: 0;
+  }
+}

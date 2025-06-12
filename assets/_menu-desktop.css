@@ -1,0 +1,84 @@
+.menu-desktop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b265e;
+  color: #efefef;
+  padding: 0 34px;
+}
+
+.menu-desktop ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+.menu-desktop li a {
+  color: #efefef;
+  text-decoration: none;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  height: 100%;
+  padding: 8px 24px;
+  display: flex;
+  cursor: pointer;
+}
+
+.menu-desktop li.big-menu > a {
+  padding-right: 6px;
+}
+
+.menu-desktop li {
+  height: 100%;
+}
+
+.menu-desktop li.active-item {
+  background-color: #fff;
+}
+
+.menu-desktop li.active-item a {
+  color: #9c372f;
+}
+
+.menu-desktop li:hover {
+  background-color: #9c372f;
+}
+
+.menu-desktop li:hover a {
+  color: #fff;
+}
+
+.menu-desktop a svg.lucide-chevron-down {
+  width: 26px;
+  height: 26px;
+  align-self: anchor-center;
+  margin-left: 6px;
+}
+
+.big-menu__panel {
+  background-color: #9c372f;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+}
+
+li.big-menu.active-item > a {
+  color: #9c372f;
+  background-color: #fff;
+}
+
+li.child-menu > a:hover {
+  color: #9c372f;
+  background-color: #fff;
+}
