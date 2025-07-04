@@ -1,0 +1,92 @@
+.hero-carousel {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.hero-carousel__track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+.hero-carousel__image {
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+  height: 400px;
+}
+@media (max-width: 900px) {
+  .hero-carousel__image {
+    height: 250px;
+  }
+}
+.hero-carousel__chevron {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.hero-carousel__chevron:hover {
+  background: rgba(0,0,0,0.7);
+}
+.hero-carousel__chevron--left {
+  left: 16px;
+}
+.hero-carousel__chevron--right {
+  right: 16px;
+}
+.hero-carousel__progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px auto 0 auto;
+  width: 60%;
+  max-width: 400px;
+  height: 6px;
+}
+.hero-carousel__progress-bar {
+  flex: 1;
+  background: rgba(0,0,0,0.15);
+  border-radius: 3px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.hero-carousel__progress-bar::after {
+  content: '';
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: #222;
+  border-radius: 3px;
+  transition: width 0s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.hero-carousel__progress-bar.active::after {
+  transition: width 8s linear;
+  width: 100%;
+}
+.hero-carousel__progress-bar.filled::after {
+  transition: none;
+  width: 100%;
+  background: #888;
+}
+.hero-carousel__progress-bar {
+  min-width: 0;
+} 

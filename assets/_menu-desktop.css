@@ -14,9 +14,7 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  flex-wrap: nowrap;
 }
 
 .menu-desktop li a {
@@ -28,6 +26,7 @@
   padding: 8px 24px;
   display: flex;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .menu-desktop li.big-menu > a {
@@ -81,4 +80,14 @@ li.big-menu.active-item > a {
 li.child-menu > a:hover {
   color: #9c372f;
   background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu-desktop {
+    padding: 0;
+  }
+
+  .menu-desktop .container {
+    padding: 0;
+  }
 }

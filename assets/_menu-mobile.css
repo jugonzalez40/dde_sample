@@ -1,0 +1,153 @@
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.menu-mobile__icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu-mobile__icon {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-mobile__search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 1rem;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-mobile__search.active {
+  transform: translateY(0);
+}
+
+.menu-mobile__search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.menu-mobile__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 300px;
+  background: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.menu-mobile__nav.active {
+  transform: translateX(0);
+}
+
+.menu-mobile__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 999;
+  display: block!important;
+}
+
+.menu-mobile__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-mobile__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-mobile__item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.menu-mobile__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-mobile__submenu {
+  display: none;
+  background: #f9f9f9;
+  padding-left: 1rem;
+}
+
+.menu-mobile__submenu.active {
+  display: block;
+}
+
+.menu-mobile__submenu-item {
+  border-bottom: 1px solid #e5e5e5;
+  list-style: none;;
+}
+
+.menu-mobile__submenu-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.menu-mobile__arrow {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-mobile__arrow.active {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+} 
+
+
+.header-container__brand {
+  height: 60px;
+}

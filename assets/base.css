@@ -2492,12 +2492,12 @@ product-info .loading__spinner:not(.hidden) ~ *,
   overflow: hidden;
 }
 
-.header__icon:not(.header__icon--summary),
+/* .header__icon:not(.header__icon--summary),
 .header__icon span {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .header__icon {
   color: rgb(var(--color-foreground));

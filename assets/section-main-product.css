@@ -1324,7 +1324,7 @@ a.product__text {
   }
 
   .product-media-container.constrain-height {
-    --viewport-offset: 170px;
+    --viewport-offset: 160px;
     --constrained-min-height: 500px;
   }
 

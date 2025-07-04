@@ -1,4 +1,3 @@
-
 @media (max-width: 768px) {
   .container {
     max-width: 100%;
@@ -12,13 +11,13 @@
 }
 
 .header-search input {
-  height: 40px;
+  height: 45px;
   width: 100%;
   border: none;
   border-radius: 0;
   outline: none;
   padding: 0 16px;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -38,7 +37,7 @@
   border: none;
   border-radius: 0;
   cursor: pointer;
-  height: 40px;
+  height: 45px;
   width: 60px;
   color: #2b265e;
 }
@@ -50,6 +49,9 @@
 
 .header-icons .header__icon {
   color: #2b265e;
+  width: auto;
+  display: flex;
+  align-items: center;
 }
 
 .header-icons .header-icon svg {
@@ -88,3 +90,97 @@ MORADO  => 2b265e
 ROJO => #9c372f
 
 */
+
+/* Sticky Header Styles */
+header.flex-column {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  header.flex-column {
+    background-color: #2b265e;
+  }
+  .header-icons .header__icon,
+  .header-menu__mobile {
+    color: #fff !important;
+  }
+}
+
+/* Add padding to body to prevent content from hiding behind fixed header */
+body {
+  padding-top: var(
+    --header-height,
+    106px
+  ); /* Adjust this value based on your header height */
+}
+
+/* Ensure header content stays visible */
+.header-logo,
+.header-search,
+.header-icons {
+  transition: all 0.3s ease-in-out;
+}
+
+.header-icons a {
+  padding: 0 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .header-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+}
+
+/* Optional: Reduce logo size when sticky */
+header.flex-column .header__heading-logo {
+  max-height: 45px;
+  width: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Optional: Adjust search bar when sticky */
+.header-search {
+  max-width: 400px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure mobile responsiveness */
+
+.header-menu__mobile {
+  outline: none;
+  border: none;
+  background: none;
+  color: #2b265e;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+align-items: center;
+}
+
+.search-input {
+  display: flex;
+  width: 100%;
+}
+
+.header-search-mobile__container .header-search {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header-icons .header__icon--cart {
+    margin-right: 0;
+  }
+
+  /* .header-logo {
+    margin-left: 14%;
+  } */
+}

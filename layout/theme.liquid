@@ -263,6 +263,10 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ '_header.css' | asset_url | stylesheet_tag }}
+    {{ '_menu-desktop.css' | asset_url | stylesheet_tag }}
+    {{ '_menu-mobile.css' | asset_url | stylesheet_tag }}
+    {{ '_vinyl-thumbnail.css' | asset_url | stylesheet_tag }}
 
     {%- unless settings.type_body_font.system? -%}
       {% comment %}theme-check-disable AssetPreload{% endcomment %}
@@ -308,6 +312,7 @@
     {% sections 'header-group' %}
 
     <main id="MainContent" class="content-for-layout focus-none container main-content " role="main" tabindex="-1">
+      {% section 'hero-carousel' %}
       {{ content_for_layout }}
     </main>
 
@@ -368,6 +373,9 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script src="{{ 'sticky-header.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'menu-mobile.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
 {% comment %}
