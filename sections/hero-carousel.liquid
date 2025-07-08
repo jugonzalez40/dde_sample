@@ -1,0 +1,119 @@
+{% schema %}
+{
+  "name": "hero-carousel",
+  "tag": "section",
+  "class": "section",
+  "settings": []
+}
+{% endschema %}
+
+<link rel="stylesheet" href="{{ 'hero-carousel.css' | asset_url }}">
+<div class="hero-carousel" id="HeroCarousel">
+  <button
+    class="hero-carousel__chevron hero-carousel__chevron--left"
+    id="HeroCarouselPrev"
+    aria-label="Previous slide"
+    type="button"
+  >
+    {% render '_icon-chevron-left' %}
+  </button>
+  <button
+    class="hero-carousel__chevron hero-carousel__chevron--right"
+    id="HeroCarouselNext"
+    aria-label="Next slide"
+    type="button"
+  >
+    {% render '_icon-chevron-right' %}
+  </button>
+  <div class="hero-carousel__track">
+    {% comment %}
+      {% if section.settings.image_1 != blank %}
+        <img src="{{ section.settings.image_1 | image_url }}" class="hero-carousel__image" alt="Hero Image 1" width="1200" height="400">
+      {% endif %}
+      {% if section.settings.image_2 != blank %}
+        <img src="{{ section.settings.image_2 | image_url }}" class="hero-carousel__image" alt="Hero Image 2" width="1200" height="400">
+      {% endif %}
+      {% if section.settings.image_3 != blank %}
+        <img src="{{ section.settings.image_3 | image_url }}" class="hero-carousel__image" alt="Hero Image 3" width="1200" height="400">
+      {% endif %}
+      {% if section.settings.image_4 != blank %}
+        <img src="{{ section.settings.image_4 | image_url }}" class="hero-carousel__image" alt="Hero Image 4" width="1200" height="400">
+      {% endif %}
+    {% endcomment %}
+
+    <img
+      src="https://tenampa.mx/cdn/shop/files/NEW_DESIGN_TENAMPA_copy_12320593-8f93-45b1-ab68-c8ef3fe29ba1.jpg?v=1744160093&width=375"
+      class="hero-carousel__image"
+      alt="Hero Image 1"
+      width="1200"
+      height="400"
+    >
+    <img
+      src="https://tenampa.mx/cdn/shop/files/NEW_DESIGN_TENAMPA_copy_12320593-8f93-45b1-ab68-c8ef3fe29ba1.jpg?v=1744160093&width=375"
+      class="hero-carousel__image"
+      alt="Hero Image 1"
+      width="1200"
+      height="400"
+    >
+    <img
+      src="https://tenampa.mx/cdn/shop/files/NEW_DESIGN_TENAMPA_copy_12320593-8f93-45b1-ab68-c8ef3fe29ba1.jpg?v=1744160093&width=375"
+      class="hero-carousel__image"
+      alt="Hero Image 1"
+      width="1200"
+      height="400"
+    >
+    <img
+      src="https://tenampa.mx/cdn/shop/files/NEW_DESIGN_TENAMPA_copy_12320593-8f93-45b1-ab68-c8ef3fe29ba1.jpg?v=1744160093&width=375"
+      class="hero-carousel__image"
+      alt="Hero Image 1"
+      width="1200"
+      height="400"
+    >
+    <img
+      src="https://tenampa.mx/cdn/shop/files/NEW_DESIGN_TENAMPA_copy_12320593-8f93-45b1-ab68-c8ef3fe29ba1.jpg?v=1744160093&width=375"
+      class="hero-carousel__image"
+      alt="Hero Image 1"
+      width="1200"
+      height="400"
+    >
+    <img
+      src="https://tenampa.mx/cdn/shop/files/NEW_DESIGN_TENAMPA_copy_12320593-8f93-45b1-ab68-c8ef3fe29ba1.jpg?v=1744160093&width=375"
+      class="hero-carousel__image"
+      alt="Hero Image 1"
+      width="1200"
+      height="400"
+    >
+  </div>
+  <div class="hero-carousel__progress" id="HeroCarouselProgress">
+    <div class="hero-carousel__progress-bar" data-index="0"></div>
+    <div class="hero-carousel__progress-bar" data-index="1"></div>
+    <div class="hero-carousel__progress-bar" data-index="2"></div>
+    <div class="hero-carousel__progress-bar" data-index="3"></div>
+  </div>
+</div>
+<script src="{{ 'hero-carousel.js' | asset_url }}" defer></script>
+
+{% comment %}
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "t:sections.hero-carousel.settings.slides.image_1.image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "t:sections.hero-carousel.settings.slides.image_2.image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "t:sections.hero-carousel.settings.slides.image_3.image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_4",
+      "label": "t:sections.hero-carousel.settings.slides.image_4.image"
+    }
+  ],
+{% endcomment %}
