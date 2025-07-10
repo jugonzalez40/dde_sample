@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize each carousel independently
   carouselTracks.forEach(function (carouselTrack, index) {
     // Find the specific buttons for this carousel
-    const carouselContainer = carouselTrack.closest(".vinyl-preview-container");
+    const carouselContainer = carouselTrack.closest(".home-container");
     if (!carouselContainer) return;
 
     const prevButton = carouselContainer.querySelector(".carousel-btn--prev");

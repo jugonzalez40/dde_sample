@@ -69,12 +69,12 @@
 
 .header-icons .cart-count-bubble {
   background-color: #2b265e;
-  bottom: 6px;
-  left: 30px;
-  height: 1.6rem;
-  width: 1.6rem;
+  bottom: 10px;
+  left: 27px;
+  height: 1.4rem;
+  width: 1.4rem;
   color: #fbf8ff;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: Bebas Neue, sans-serif;
   font-size: 14px;
 }
 

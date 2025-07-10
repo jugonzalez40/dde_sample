@@ -21,16 +21,16 @@
   color: #efefef;
   text-decoration: none;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   height: 100%;
-  padding: 8px 24px;
+  padding: 6px 20px;
   display: flex;
   cursor: pointer;
   white-space: nowrap;
 }
 
-.menu-desktop li.big-menu > a {
-  padding-right: 6px;
+.menu-desktop li.big-menu > big-menu > a {
+  padding-right: 8px;
 }
 
 .menu-desktop li {

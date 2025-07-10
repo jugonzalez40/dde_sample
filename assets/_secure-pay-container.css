@@ -1,0 +1,33 @@
+.secure-pay-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* justify-content: left; */
+
+  font-family: "Bebas Neue";
+  color: #000;
+  background-color: #fffade;
+  padding: 8px 12px;
+}
+
+.secure-pay-container svg {
+  width: 28px;
+  height: 28px;
+}
+
+.secure-pay-container .logos-box {
+  display: none;
+}
+
+.secure-pay-container .secure-pay-container__lock svg {
+  width: 28px;
+  height: 28px;
+}
+
+.secure-pay-container .secure-pay-container__lock span {
+  font-size: 24px;
+}
+
+.secure-pay-container .secure-pay-container__logos {
+  width: 100%;
+}

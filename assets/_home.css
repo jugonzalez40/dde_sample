@@ -100,3 +100,15 @@
     gap: 0;
   }
 }
+
+.vinyl-preview-container__carousel-prev.carousel-btn.carousel-btn--prev {
+  position: absolute;
+  left: -42px;
+  top: 50%;
+} 
+
+.vinyl-preview-container__carousel-next.carousel-btn.carousel-btn--next {
+  position: absolute;
+  right: -42px;
+  top: 50%;
+}

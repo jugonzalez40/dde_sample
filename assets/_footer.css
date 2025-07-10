@@ -6,6 +6,7 @@ footer {
   font-size: 12px;
   padding: 24px 0;
   font-family: "Inter", sans-serif;
+  margin-top: 48px;
 }
 
 .footer-container__social p {
@@ -18,4 +19,8 @@ footer {
   margin-right: 12px;
 }
 
-
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+}
