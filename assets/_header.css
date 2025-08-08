@@ -33,14 +33,7 @@
   box-shadow: none;
 }
 
-.header-search button {
-  border: none;
-  border-radius: 0;
-  cursor: pointer;
-  height: 45px;
-  width: 60px;
-  color: #2b265e;
-}
+
 
 .header-icons {
   display: flex;

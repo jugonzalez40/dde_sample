@@ -17,6 +17,7 @@
 
     {{ '_lib.css' | asset_url | stylesheet_tag }}
     {{ '_vinyl-thumbnail.css' | asset_url | stylesheet_tag }}
+    {{ '_search-input.css' | asset_url | stylesheet_tag }}
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -42,6 +43,7 @@
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ '_search-input.js' | asset_url }}" defer="defer"></script>
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
