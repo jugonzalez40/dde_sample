@@ -24,8 +24,10 @@
   | replace: '(Usado vg)', ''
   | replace: '(Usado vg+)', ''
   | replace: '(Usado G+, Caratula F)', ''
+  | replace: '(Nuevo)', ''
   | strip
 %}
+
 
 {%- assign normalized = clean_title | replace: '–', ' - ' | replace: '—', ' - ' -%}
 {%- assign parts = normalized | split: ' - ' -%}
@@ -54,7 +56,9 @@
       width="160px"
       height="160px"
     >
-    <span class="vinyl-thumbnail__status">VG+</span>
+    <span class="vinyl-thumbnail__status">
+      {{ card_product.metafields.custom.condition | upcase }}
+    </span>
 
     {%- if card_product.available == false -%}
       <span class="vinyl-thumbnail__badge">
