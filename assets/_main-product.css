@@ -1,0 +1,303 @@
+.product-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+/* For mobile */
+@media only screen and (max-width: 750px) {
+  
+}
+
+.product-container__images {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+/* // tablet mobile */
+
+
+/* media mobile */
+@media only screen and (max-width: 992px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-container__images {
+    width: 100%;
+  }
+
+  .product-container__images > img {
+    height: 220px;
+  }
+}
+
+.product-container__images > img {
+  object-fit: cover;
+  object-position: center;
+  /* width: 100%; */
+  width: auto;
+}
+
+.product-container__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-container__info > * {
+  margin: 0;
+}
+
+.product-container__title {
+  font-size: 28px;
+  line-height: 28px;
+
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 16px;
+}
+
+.product-container__props {
+  display: flex;
+  flex-direction: row;
+  font-size: 14.4px;
+  justify-content: space-between;
+}
+
+.product-container__props > ul {
+  display: flex;
+  flex-direction: column;
+  box-sizing: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.product-container__props > ul > li {
+  line-height: 1.4;
+}
+
+.product-container__condition > span {
+  background-color: #18dfba;
+  font-weight: 600;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.product-container__country > img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.product-container__divider {
+  display: block;
+  margin: 16px 0;
+  background-color: #0000003b;
+  height: 2px;
+  width: 100%;
+}
+
+.product-container__tracks p:first-child {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 28px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.product-container__tracks p:last-child {
+  font-size: 14.4px;
+  line-height: 1.4;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.product-container__price {
+  width: 100%;
+
+  font-size: 24px;
+  max-width: 300px;
+}
+
+.product-container__price .price__container {
+  text-transform: uppercase;
+  display: flex;
+  font-family: "Bebas Neue", sans-serif;
+  flex-direction: column;
+}
+
+.product-container__price .price-item__sale-icon {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+.product-container__price .quantity__label {
+  font-family: "Bebas Neue";
+  font-size: 24px;
+  margin-top: 16px;
+}
+
+.product-container__price .quantity__input {
+  font-family: "Bebas Neue";
+  font-size: 20px;
+  width: 48px;
+}
+
+.product-container__price .quantity__button {
+  width: auto;
+}
+
+.product-container__price .product-form__buttons button,
+.product-container__price .product-form__buttons .shopify-payment-button {
+  font-family: "Bebas Neue", sans-serif;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.product-container__price .product-form__buttons > button:nth-child(1) {
+  color: rgba(var(--color-foreground), 0.75);
+  background-color: #2b265e;
+  color: #fff;
+  margin-top: 24px;
+}
+
+.product-container__price .product-form__buttons button:hover {
+  border: none;
+  background-color: #2b265e;
+  /* transform: scale(1.01); */
+  transform: rotate(-0.4deg) scale(1.01);
+}
+
+.product-container__price .product-form__buttons button::after,
+.product-container__price .product-form__buttons button::before {
+  content: none;
+}
+
+.product-container__price
+  shopify-buy-it-now-button
+  .shopify-payment-button__button {
+  color: #2b265e;
+  background-color: #eee;
+}
+
+.product-container__price
+  shopify-buy-it-now-button
+  .shopify-payment-button__button:hover {
+  color: #2b265e;
+  background-color: #eee;
+}
+
+.product-container__price .pickup-availability-info .caption-large,
+.product-container__price .pickup-availability-info button {
+  font-size: 14px;
+  /* line-height: 1.4; */
+}
+
+/* Fullscreen Image Modal */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(5px);
+  cursor: pointer;
+}
+
+.image-modal.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  transition: opacity 0.3s ease;
+}
+
+.image-modal-close:hover {
+  opacity: 0.7;
+}
+
+.image-modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+  padding: 10px 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.image-modal-nav:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-modal-prev {
+  left: 20px;
+}
+
+.image-modal-next {
+  right: 20px;
+}
+
+/* Make product images clickable */
+.product-container__images > img {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-container__images > img:hover {
+  transform: rotate(-0.4deg) scale(1.01);
+}
+
+/* Mobile responsive for modal */
+@media (max-width: 768px) {
+  .image-modal-content {
+    max-width: 95%;
+    max-height: 80%;
+  }
+  
+  .image-modal-close {
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+  }
+  
+  .image-modal-nav {
+    font-size: 24px;
+    padding: 8px 12px;
+  }
+  
+  .image-modal-prev {
+    left: 10px;
+  }
+  
+  .image-modal-next {
+    right: 10px;
+  }
+}

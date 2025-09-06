@@ -217,12 +217,6 @@
   max-width: 100%;
 }
 
-.product__info-container .product-form,
-.product__info-container .product__description,
-.product__info-container .icon-with-text {
-  margin: 2.5rem 0;
-}
-
 .product__text {
   margin-bottom: 0;
 }
@@ -308,10 +302,6 @@ a.product__text {
 .product--no-media .product__media-wrapper,
 .product--no-media .product__info-wrapper {
   padding: 0;
-}
-
-.product__tax {
-  margin-top: -1.4rem;
 }
 
 .product--no-media .share-button {

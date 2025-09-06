@@ -361,14 +361,14 @@ blockquote {
 
 .caption {
   font-size: 1rem;
-  letter-spacing: 0.07rem;
-  line-height: calc(1 + 0.7 / var(--font-body-scale));
+  /* letter-spacing: 0.07rem; */
+  line-height: 0;
 }
 
 @media screen and (min-width: 750px) {
-  .caption {
+  /* .caption {
     font-size: 1.2rem;
-  }
+  } */
 }
 
 .caption-with-letter-spacing {
@@ -1170,15 +1170,15 @@ button.shopify-payment-button__button--unbranded,
 .shopify-payment-button [role="button"],
 .cart__dynamic-checkout-buttons [role="button"],
 .cart__dynamic-checkout-buttons iframe {
-  --shadow-horizontal-offset: var(--buttons-shadow-horizontal-offset);
+  /* --shadow-horizontal-offset: var(--buttons-shadow-horizontal-offset);
   --shadow-vertical-offset: var(--buttons-shadow-vertical-offset);
   --shadow-blur-radius: var(--buttons-shadow-blur-radius);
   --shadow-opacity: var(--buttons-shadow-opacity);
   --shadow-visible: var(--buttons-shadow-visible);
-  --border-offset: var(--buttons-border-offset);
+  --border-offset: var(--buttons-border-offset); */
   /* reduce radius edge artifacts */
-  --border-opacity: calc(1 - var(--buttons-border-opacity));
-  border-radius: var(--buttons-radius-outset);
+  /* --border-opacity: calc(1 - var(--buttons-border-opacity)); */
+  /* border-radius: var(--buttons-radius-outset); */
   position: relative;
 }
 
@@ -1231,9 +1231,6 @@ button.shopify-payment-button__button--unbranded {
   bottom: 0;
   left: 0;
   z-index: -1;
-  border-radius: var(--buttons-radius-outset);
-  box-shadow: var(--shadow-horizontal-offset) var(--shadow-vertical-offset)
-    var(--shadow-blur-radius) rgba(var(--color-shadow), var(--shadow-opacity));
 }
 
 .button:after,
@@ -1874,10 +1871,10 @@ input[type="checkbox"] {
 .quantity {
   color: rgba(var(--color-foreground));
   position: relative;
-  width: calc(14rem / var(--font-body-scale) + var(--inputs-border-width) * 2);
+  
   display: flex;
   border-radius: var(--inputs-radius);
-  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+
 }
 
 .quantity:after {
@@ -1913,19 +1910,11 @@ input[type="checkbox"] {
 }
 
 .quantity__input {
-  color: currentColor;
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight);
-  font-size: 1.6rem;
-  font-weight: 500;
-  opacity: 0.85;
   text-align: center;
-  background-color: transparent;
+
   border: 0;
-  padding: 0 0.5rem;
-  width: 100%;
-  flex-grow: 1;
+  
+  
   -webkit-appearance: none;
   appearance: none;
 }
@@ -1971,8 +1960,10 @@ input[type="checkbox"] {
 
 .quantity__button:not(:focus-visible):not(.focused),
 .quantity__input:not(:focus-visible):not(.focused) {
-  box-shadow: inherit;
-  background-color: inherit;
+  /* box-shadow: inherit;
+  background-color: inherit; */
+
+  box-shadow: none;
 }
 
 .quantity__input:-webkit-autofill,
@@ -2905,18 +2896,8 @@ details-disclosure > details {
 }
 
 .badge {
-  border: 1px solid transparent;
-  border-radius: var(--badge-corner-radius);
-  display: inline-block;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  line-height: 1;
-  padding: 0.5rem 1.3rem 0.6rem 1.3rem;
-  text-align: center;
-  background-color: rgb(var(--color-badge-background));
-  border-color: rgba(var(--color-badge-border), var(--alpha-badge-border));
-  color: rgb(var(--color-badge-foreground));
-  word-break: break-word;
+  background-color: #9c372f;
+  color: #fff;
 }
 
 .gradient {
